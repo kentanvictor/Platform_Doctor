@@ -28,7 +28,7 @@ import com.baidu.mapapi.model.LatLng;
 import java.util.ArrayList;
 import java.util.List;
 
-public class LBSActivity extends AppCompatActivity{
+public class LBSActivity extends AppCompatActivity {
     public LocationClient mLocationClient;
 
     private TextView positionText;
@@ -61,7 +61,7 @@ public class LBSActivity extends AppCompatActivity{
             permissionList.add(Manifest.permission.WRITE_EXTERNAL_STORAGE);
         }
         if (!permissionList.isEmpty()) {
-            String [] permissions = permissionList.toArray(new String[permissionList.size()]);
+            String[] permissions = permissionList.toArray(new String[permissionList.size()]);
             ActivityCompat.requestPermissions(LBSActivity.this, permissions, 1);
         } else {
             requestLocation();
@@ -91,7 +91,7 @@ public class LBSActivity extends AppCompatActivity{
         mLocationClient.start();
     }
 
-    private void initLocation(){
+    private void initLocation() {
         LocationClientOption option = new LocationClientOption();
         option.setScanSpan(5000);
         option.setIsNeedAddress(true);

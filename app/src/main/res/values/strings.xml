@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Platform_Doctor</string>
+    <string name="lbs_but">百度地圖</string>
 </resources>

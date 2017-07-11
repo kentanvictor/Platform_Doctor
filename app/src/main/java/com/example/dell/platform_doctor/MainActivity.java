@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener{
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     private Button lbs_but;
 
     @Override
@@ -15,19 +15,19 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
         init();
     }
-
+    //點擊事件
     @Override
     public void onClick(View v) {
-        switch (v.getId())
-        {
+        switch (v.getId()) {
             case R.id.lbs_but:
-                Intent intent = new Intent(MainActivity.this,LBSActivity.class);
+                Intent intent = new Intent(MainActivity.this, LBSActivity.class);
                 startActivity(intent);
                 break;
             default:
                 break;
         }
     }
+
     //初始化
     public void init() {
         lbs_but = (Button) findViewById(R.id.lbs_but);
