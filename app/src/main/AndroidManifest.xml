@@ -23,14 +23,14 @@
             android:name="com.baidu.lbsapi.API_KEY"
             android:value="DeawdKXxKTeqGIHtzkiPDPVu" />
 
-        <activity android:name=".MainActivity">
+        <activity android:name=".Activity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".LBSActivity">
+        <activity android:name=".Activity.LBSActivity">
         </activity>
 
         <service

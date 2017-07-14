@@ -9,7 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
-import com.example.dell.platform_doctor.LBSActivity;
+import com.example.dell.platform_doctor.Activity.LBSActivity;
 import com.example.dell.platform_doctor.R;
 
 /*

@@ -1,10 +1,11 @@
-package com.example.dell.platform_doctor;
+package com.example.dell.platform_doctor.Activity;
 
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.Fragment;
 import android.view.MenuItem;
 
+import com.example.dell.platform_doctor.R;
 import com.example.dell.platform_doctor.fragment.FavFragment;
 import com.example.dell.platform_doctor.fragment.FindFragment;
 import com.example.dell.platform_doctor.fragment.MapFragment;

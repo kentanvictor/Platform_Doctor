@@ -1,4 +1,4 @@
-package com.example.dell.platform_doctor;
+package com.example.dell.platform_doctor.Activity;
 
 /*
  * Created by KenTan on 2017/7/11.
@@ -24,6 +24,7 @@ import com.baidu.mapapi.map.MapStatusUpdateFactory;
 import com.baidu.mapapi.map.MapView;
 import com.baidu.mapapi.map.MyLocationData;
 import com.baidu.mapapi.model.LatLng;
+import com.example.dell.platform_doctor.R;
 
 import java.util.ArrayList;
 import java.util.List;
