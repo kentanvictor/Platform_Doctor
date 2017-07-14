@@ -3,4 +3,5 @@
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="but_text">20sp</dimen>
+    <dimen name="base_action_bar_height">48.0dip</dimen>
 </resources>

@@ -1,36 +1,55 @@
 package com.example.dell.platform_doctor;
 
-import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
+import android.support.annotation.NonNull;
+import android.support.design.widget.BottomNavigationView;
+import android.support.v4.app.Fragment;
+import android.view.MenuItem;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
-    private Button lbs_but;
+import com.example.dell.platform_doctor.fragment.FavFragment;
+import com.example.dell.platform_doctor.fragment.FindFragment;
+import com.example.dell.platform_doctor.fragment.MapFragment;
+import com.example.dell.platform_doctor.fragment.SetFragment;
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        init();
-    }
-    //點擊事件
-    @Override
-    public void onClick(View v) {
-        switch (v.getId()) {
-            case R.id.lbs_but:
-                Intent intent = new Intent(MainActivity.this, LBSActivity.class);
-                startActivity(intent);
-                break;
-            default:
-                break;
+public class MainActivity extends BaseActivity  implements
+        BottomNavigationView.OnNavigationItemSelectedListener{
+        public BottomNavigationView navigationView;
+        @Override
+        protected Fragment createFragment() {
+            return MapFragment.newInstance();
+        }
+
+        @Override
+        public int getLayoutResId() {
+            return R.layout.activity_main;
+        }
+
+        @Override
+        public int getContainerId() {
+            return R.id.fragment_container;
+        }
+
+        @Override
+        public void init() {
+            super.init();
+            navigationView = (BottomNavigationView) findViewById(R.id.navigation);
+            navigationView.setOnNavigationItemSelectedListener(this);
+        }
+        @Override
+        public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+            switch (item.getItemId()) {
+                case R.id.bottom_nav_map:
+                    switchFragment(MapFragment.newInstance());
+                    break;
+                case R.id.bottom_nav_set:
+                    switchFragment(SetFragment.newInstance());
+                    break;
+                case R.id.bottom_nav_find:
+                    switchFragment(FindFragment.newInstance());
+                    break;
+                case R.id.bottom_nav_fav:
+                    switchFragment(FavFragment.newInstance());
+                    break;
+            }
+            return true;
         }
     }
-
-    //初始化
-    public void init() {
-        lbs_but = (Button) findViewById(R.id.lbs_but);
-        lbs_but.setOnClickListener(this);
-    }
-}
