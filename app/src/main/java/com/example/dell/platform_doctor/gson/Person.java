@@ -6,7 +6,7 @@ package com.example.dell.platform_doctor.gson;
 
 import cn.bmob.v3.BmobObject;
 
-public class Person extends BmobObject{
+public class Person extends BmobObject {
     private String name;
     private String address;
     private String phoneNumber;

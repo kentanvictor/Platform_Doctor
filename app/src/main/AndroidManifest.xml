@@ -30,14 +30,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Activity.LBSActivity">
-        </activity>
+        <activity android:name=".Activity.LBSActivity"></activity>
 
         <service
             android:name="com.baidu.location.f"
             android:enabled="true"
-            android:process=":remote">
-        </service>
+            android:process=":remote"></service>
     </application>
 
 </manifest>

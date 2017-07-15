@@ -14,8 +14,7 @@ import com.example.dell.platform_doctor.R;
  */
 
 public class FindFragment extends Fragment {
-    public static FindFragment newInstance()
-    {
+    public static FindFragment newInstance() {
         return new FindFragment();
     }
 

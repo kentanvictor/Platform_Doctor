@@ -14,14 +14,14 @@ import com.example.dell.platform_doctor.R;
  */
 
 public class FavFragment extends Fragment {
-    public static FavFragment newInstance()
-    {
+    public static FavFragment newInstance() {
         return new FavFragment();
     }
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_fav,container,false);
+        View view = inflater.inflate(R.layout.fragment_fav, container, false);
         return view;
     }
 }
