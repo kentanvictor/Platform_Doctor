@@ -19,7 +19,8 @@ import com.example.dell.platform_doctor.R;
 public class MapFragment extends Fragment implements View.OnClickListener {
     Button lbs_but;
 
-    public static MapFragment newInstance() {
+    public static MapFragment newInstance()
+    {
         return new MapFragment();
     }
 
@@ -31,7 +32,8 @@ public class MapFragment extends Fragment implements View.OnClickListener {
         return view;
     }
 
-    public void initView(View view) {
+    public void initView(View view)
+    {
         lbs_but = (Button) view.findViewById(R.id.lbs_but);
         lbs_but.setOnClickListener(this);
     }

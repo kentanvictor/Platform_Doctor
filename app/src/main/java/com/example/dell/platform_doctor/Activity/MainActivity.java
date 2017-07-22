@@ -11,9 +11,9 @@ import com.example.dell.platform_doctor.fragment.FindFragment;
 import com.example.dell.platform_doctor.fragment.MapFragment;
 import com.example.dell.platform_doctor.fragment.SetFragment;
 
-public class MainActivity extends BaseActivity implements
+public class  MainActivity extends BaseActivity implements
         BottomNavigationView.OnNavigationItemSelectedListener {
-    public BottomNavigationView navigationView;
+    public  BottomNavigationView navigationView;
 
     @Override
     protected Fragment createFragment() {
