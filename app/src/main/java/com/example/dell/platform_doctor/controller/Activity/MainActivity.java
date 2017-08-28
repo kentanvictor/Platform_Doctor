@@ -1,4 +1,4 @@
-package com.example.dell.platform_doctor.Activity;
+package com.example.dell.platform_doctor.controller.activity;
 
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
@@ -6,10 +6,10 @@ import android.support.v4.app.Fragment;
 import android.view.MenuItem;
 
 import com.example.dell.platform_doctor.R;
-import com.example.dell.platform_doctor.fragment.FavFragment;
-import com.example.dell.platform_doctor.fragment.FindFragment;
-import com.example.dell.platform_doctor.fragment.MapFragment;
-import com.example.dell.platform_doctor.fragment.SetFragment;
+import com.example.dell.platform_doctor.controller.fragment.FavFragment;
+import com.example.dell.platform_doctor.controller.fragment.FindFragment;
+import com.example.dell.platform_doctor.controller.fragment.MapFragment;
+import com.example.dell.platform_doctor.controller.fragment.SetFragment;
 
 public class  MainActivity extends BaseActivity implements
         BottomNavigationView.OnNavigationItemSelectedListener {

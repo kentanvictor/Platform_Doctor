@@ -1,4 +1,4 @@
-package com.example.dell.platform_doctor.fragment;
+package com.example.dell.platform_doctor.controller.fragment;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,7 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
-import com.example.dell.platform_doctor.Activity.LBSActivity;
+import com.example.dell.platform_doctor.controller.activity.LBSActivity;
 import com.example.dell.platform_doctor.R;
 
 /*

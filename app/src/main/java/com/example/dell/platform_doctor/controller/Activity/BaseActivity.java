@@ -1,4 +1,4 @@
-package com.example.dell.platform_doctor.Activity;
+package com.example.dell.platform_doctor.controller.activity;
 
 import android.os.Bundle;
 import android.support.annotation.IdRes;

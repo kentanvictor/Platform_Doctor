@@ -1,4 +1,4 @@
-package com.example.dell.platform_doctor.fragment;
+package com.example.dell.platform_doctor.controller.fragment;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -13,15 +13,14 @@ import com.example.dell.platform_doctor.R;
  * Created by KenTan on 2017/7/12.
  */
 
-public class FavFragment extends Fragment {
-    public static FavFragment newInstance() {
-        return new FavFragment();
+public class FindFragment extends Fragment {
+    public static FindFragment newInstance() {
+        return new FindFragment();
     }
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_fav, container, false);
-        return view;
+        return inflater.inflate(R.layout.fragment_find, container, false);
     }
 }

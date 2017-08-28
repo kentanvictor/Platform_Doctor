@@ -1,4 +1,4 @@
-package com.example.dell.platform_doctor.Activity;
+package com.example.dell.platform_doctor.controller.activity;
 
 /*
  * Created by KenTan on 2017/7/11.
