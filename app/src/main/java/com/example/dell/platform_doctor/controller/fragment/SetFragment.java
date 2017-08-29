@@ -14,7 +14,7 @@ import com.example.dell.platform_doctor.R;
 import com.example.dell.platform_doctor.model.AddData;
 
 /*
- * Created by KenTan on 2017/7/12.
+ * Created by JohnnyTan on 2017/7/12.
  */
 
 public class SetFragment extends Fragment implements View.OnClickListener {
