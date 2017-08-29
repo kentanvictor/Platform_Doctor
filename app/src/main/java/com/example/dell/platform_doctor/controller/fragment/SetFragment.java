@@ -1,5 +1,6 @@
 package com.example.dell.platform_doctor.controller.fragment;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -27,7 +28,8 @@ public class SetFragment extends Fragment implements View.OnClickListener {
     private String address;
     private String number;
     private int age;
-    private AddData addData = new AddData();
+    private AddData add;
+    private Context context;
 
     public static SetFragment newInstance() {
         return new SetFragment();
@@ -54,6 +56,8 @@ public class SetFragment extends Fragment implements View.OnClickListener {
         addAddress.setOnClickListener(this);
         addPhone.setOnClickListener(this);
         addAge.setOnClickListener(this);
+        add = new AddData();
+        context = getActivity();
     }
 
     @Override
@@ -66,7 +70,7 @@ public class SetFragment extends Fragment implements View.OnClickListener {
                 address = addAddress.getText().toString();
                 number = addPhone.getText().toString();
                 age = Integer.parseInt(addAge.getText().toString());
-                addData.addSingleData(name, address, number, age);
+                add.addSingleData(context, name, address, number, age);
                 break;
             default:
                 break;

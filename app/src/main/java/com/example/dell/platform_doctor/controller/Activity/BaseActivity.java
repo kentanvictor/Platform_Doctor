@@ -29,7 +29,7 @@ public abstract class BaseActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(getLayoutResId());
-        Bmob.initialize(this, "c833ab4f4c879430ecd6da55841e252c");
+        Bmob.initialize(this, "55591ce0eebfd0a9bb70c0bcee79013f");
         fm = getSupportFragmentManager();
         mFragment = fm.findFragmentById(getContainerId());
 
