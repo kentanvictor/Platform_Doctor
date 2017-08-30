@@ -82,9 +82,9 @@ public class AddData {
             @Override
             public void done(Person p1, BmobException e) {
                 if (e == null) {
-                    showToast(context,"注册成功:" + p1.toString());
+                    showToast(context, "注册成功:" + p1.toString());
                 } else {
-                    showToast(context,"done:" + e);
+                    showToast(context, "done:" + e);
                 }
             }
         });
