@@ -27,7 +27,7 @@ public class QueryData {
     //查詢單條數據
     public void querySingleData(final Context context) {
         BmobQuery<Person> p1 = new BmobQuery<>();
-        p1.getObject("e3a9364d52", new QueryListener<Person>() {
+        p1.getObject("abaf456099", new QueryListener<Person>() {
             @Override
             public void done(Person person, BmobException e) {
                 if (e == null) {
