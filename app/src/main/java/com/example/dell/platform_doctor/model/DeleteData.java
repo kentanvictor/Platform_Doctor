@@ -8,7 +8,7 @@ import com.example.dell.platform_doctor.gson.Person;
 import cn.bmob.v3.exception.BmobException;
 import cn.bmob.v3.listener.UpdateListener;
 
-/**
+/*
  * Created by JohnnyTan on 2017/9/2.
  */
 
