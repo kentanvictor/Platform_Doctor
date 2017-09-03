@@ -4,6 +4,8 @@ package com.example.dell.platform_doctor.gson;
  * Created by KenTan on 2017/7/11.
  */
 
+import java.util.List;
+
 import cn.bmob.v3.BmobObject;
 
 public class Person extends BmobObject {
@@ -11,6 +13,9 @@ public class Person extends BmobObject {
     private String address;
     private String phoneNumber;
     private int age;
+    private List<String> hobbys;
+    private List<BankCard> cards;
+
 
     public String getName() {
         return name;
@@ -42,6 +47,32 @@ public class Person extends BmobObject {
 
     public void setAge(int age) {
         this.age = age;
+    }
+
+    public static class BankCard {
+        private String cardNumber;
+        private String bankName;
+
+        public String getCardNumber() {
+            return cardNumber;
+        }
+
+        public void setBankName(String bankName) {
+            this.bankName = bankName;
+        }
+
+        public void setCardNumber(String cardNumber) {
+            this.cardNumber = cardNumber;
+        }
+
+        public String getBankName() {
+            return bankName;
+        }
+
+        public BankCard(String bankName, String cardNumber) {
+            this.bankName = bankName;
+            this.cardNumber = cardNumber;
+        }
     }
 
 }
