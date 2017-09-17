@@ -46,7 +46,7 @@ public class ContentFragment extends Fragment {
         Bundle bundle = getArguments();
         mFragmentIndex = bundle.getInt("fragmentIndex");
 
-        View view = inflater.inflate(R.layout.fragment_content, null);
+        View view = inflater.inflate(R.layout.fragment_content, container, false);
         mRecyclerView = (CommonRecyclerView) view.findViewById(R.id.recyclerView);
         initRecyclerView();
         return view;
@@ -58,7 +58,7 @@ public class ContentFragment extends Fragment {
         mRecyclerView.setItemAnimator(new DefaultItemAnimator());
 
         List<String> list = new ArrayList<>();
-        for(int i = 0; i < 30; i++) {
+        for (int i = 0; i < 30; i++) {
             list.add("Fragment " + mFragmentIndex + ", 第" + (i + 1) + "条数据");
         }
 
