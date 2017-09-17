@@ -4,18 +4,33 @@ import android.os.Bundle;
 import android.support.annotation.IdRes;
 import android.support.annotation.LayoutRes;
 import android.support.annotation.Nullable;
+import android.support.design.widget.AppBarLayout;
+import android.support.design.widget.BottomNavigationView;
+import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
+
+import com.example.dell.platform_doctor.R;
+import com.example.dell.platform_doctor.controller.fragment.ContentFragment;
+import com.example.dell.platform_doctor.controller.fragment.ContentFragmentAdapter;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import cn.bmob.v3.Bmob;
 
 /*
- * Created by KenTan on 2017/7/12.
+ * Created by johnnyTan on 2017/7/12.
  */
 
 public abstract class BaseActivity extends AppCompatActivity {
     private android.support.v4.app.FragmentManager fm;
     private Fragment mFragment;
+    private TabLayout mTabLayout;
+    private ViewPager mViewPager;
+    private BottomNavigationView mBottomNavigationView;
+    private AppBarLayout mAppBarLayout;
 
     protected abstract Fragment createFragment();
 
@@ -40,9 +55,14 @@ public abstract class BaseActivity extends AppCompatActivity {
                     .commit();
         }
         init();
+        initViewData();
     }
 
     public void init() {
+        mTabLayout = (TabLayout) findViewById(R.id.tabLayout);
+        mViewPager = (ViewPager) findViewById(R.id.viewpager);
+        mBottomNavigationView = (BottomNavigationView) findViewById(R.id.navigation);
+        mAppBarLayout = (AppBarLayout) findViewById(R.id.appBarLayout);
     }
 
     public void switchFragment(Fragment fragment) {
@@ -53,5 +73,17 @@ public abstract class BaseActivity extends AppCompatActivity {
                     .commit();
             mFragment = fragment;
         }
+    }
+    private void initViewData() {
+
+        List<ContentFragment> fragments = new ArrayList<>();
+        for(int i = 0; i < 5; i++) {
+            fragments.add(ContentFragment.newInstance(i));
+        }
+        mTabLayout.setTabMode(TabLayout.MODE_FIXED);
+
+        ContentFragmentAdapter adapter = new ContentFragmentAdapter(fragments, getSupportFragmentManager());
+        mViewPager.setAdapter(adapter);
+        mTabLayout.setupWithViewPager(mViewPager);
     }
 }
