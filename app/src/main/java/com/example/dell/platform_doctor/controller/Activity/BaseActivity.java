@@ -74,10 +74,11 @@ public abstract class BaseActivity extends AppCompatActivity {
             mFragment = fragment;
         }
     }
+
     private void initViewData() {
 
         List<ContentFragment> fragments = new ArrayList<>();
-        for(int i = 0; i < 5; i++) {
+        for (int i = 0; i < 5; i++) {
             fragments.add(ContentFragment.newInstance(i));
         }
         mTabLayout.setTabMode(TabLayout.MODE_FIXED);

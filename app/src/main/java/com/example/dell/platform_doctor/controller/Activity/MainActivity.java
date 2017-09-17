@@ -2,7 +2,9 @@ package com.example.dell.platform_doctor.controller.activity;
 
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
+import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
+import android.support.v4.view.ViewPager;
 import android.view.MenuItem;
 
 import com.example.dell.platform_doctor.R;
@@ -28,9 +30,10 @@ public class MainActivity extends BaseActivity implements BottomNavigationView.O
         mAppBarLayout = (AppBarLayout) findViewById(R.id.appBarLayout);
 
 
-        *//**
-         * 如果不想使用Behavior实现BottomNavigationView进行隐藏显示的画，也可用采用下面的监听实现此效果
-         * *//*
+        */
+    /**
+     * 如果不想使用Behavior实现BottomNavigationView进行隐藏显示的画，也可用采用下面的监听实现此效果
+     *//*
         *//*mAppBarLayout.addOnOffsetChangedListener(new AppBarLayout.OnOffsetChangedListener() {
             @Override
             public void onOffsetChanged(AppBarLayout appBarLayout, int verticalOffset) {
@@ -56,6 +59,9 @@ public class MainActivity extends BaseActivity implements BottomNavigationView.O
         mTabLayout.setupWithViewPager(mViewPager);
     }*/
     public BottomNavigationView navigationView;
+    private Fragment mFragment;
+    private TabLayout mTabLayout;
+    private ViewPager mViewPager;
 
     @Override
     protected Fragment createFragment() {
@@ -97,5 +103,4 @@ public class MainActivity extends BaseActivity implements BottomNavigationView.O
         }
         return true;
     }
-
 }
