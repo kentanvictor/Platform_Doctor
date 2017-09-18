@@ -82,7 +82,6 @@ public abstract class BaseActivity extends AppCompatActivity {
             fragments.add(ContentFragment.newInstance(i));
         }
         mTabLayout.setTabMode(TabLayout.MODE_FIXED);
-
         ContentFragmentAdapter adapter = new ContentFragmentAdapter(fragments, getSupportFragmentManager());
         mViewPager.setAdapter(adapter);
         mTabLayout.setupWithViewPager(mViewPager);
