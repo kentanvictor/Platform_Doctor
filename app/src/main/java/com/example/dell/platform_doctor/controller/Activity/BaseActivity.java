@@ -27,10 +27,12 @@ import cn.bmob.v3.Bmob;
 public abstract class BaseActivity extends AppCompatActivity {
     private android.support.v4.app.FragmentManager fm;
     private Fragment mFragment;
-    private TabLayout mTabLayout;
-    private ViewPager mViewPager;
+    protected TabLayout mTabLayout;
+    protected ViewPager mViewPager;
     private BottomNavigationView mBottomNavigationView;
     private AppBarLayout mAppBarLayout;
+
+
 
     protected abstract Fragment createFragment();
 
@@ -56,6 +58,8 @@ public abstract class BaseActivity extends AppCompatActivity {
         }
         init();
         initViewData();
+
+
     }
 
     public void init() {

@@ -1,11 +1,12 @@
 package com.example.dell.platform_doctor.controller.activity;
 
+import android.os.Bundle;
 import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
 import android.support.design.widget.BottomNavigationView;
-import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
-import android.support.v4.view.ViewPager;
 import android.view.MenuItem;
+import android.view.View;
 
 import com.example.dell.platform_doctor.R;
 import com.example.dell.platform_doctor.controller.fragment.FavFragment;
@@ -14,54 +15,15 @@ import com.example.dell.platform_doctor.controller.fragment.MapFragment;
 import com.example.dell.platform_doctor.controller.fragment.SetFragment;
 
 public class MainActivity extends BaseActivity implements BottomNavigationView.OnNavigationItemSelectedListener {
-    /*TabLayout mTabLayout;
-    ViewPager mViewPager;
-    BottomNavigationView mBottomNavigationView;
-    AppBarLayout mAppBarLayout;
+    public BottomNavigationView navigationView;
+    private Fragment mFragment;
+
+    private static final String TAG = "MainActivity";
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
-
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        mTabLayout = (TabLayout) findViewById(R.id.tabLayout);
-        mViewPager = (ViewPager) findViewById(R.id.viewpager);
-        mBottomNavigationView = (BottomNavigationView) findViewById(R.id.navigation);
-        mAppBarLayout = (AppBarLayout) findViewById(R.id.appBarLayout);
-
-
-        */
-    /**
-     * 如果不想使用Behavior实现BottomNavigationView进行隐藏显示的画，也可用采用下面的监听实现此效果
-     *//*
-        *//*mAppBarLayout.addOnOffsetChangedListener(new AppBarLayout.OnOffsetChangedListener() {
-            @Override
-            public void onOffsetChanged(AppBarLayout appBarLayout, int verticalOffset) {
-
-                Log.d("MainActivity", verticalOffset + "");
-                mBottomNavigationView.setTranslationY(-verticalOffset);
-            }
-        });*//*
-
-        initViewData();
     }
-
-    private void initViewData() {
-
-        List<ContentFragment> fragments = new ArrayList<>();
-        for(int i = 0; i < 5; i++) {
-            fragments.add(ContentFragment.newInstance(i));
-        }
-        mTabLayout.setTabMode(TabLayout.MODE_FIXED);
-
-        ContentFragmentAdapter adapter = new ContentFragmentAdapter(fragments, getSupportFragmentManager());
-        mViewPager.setAdapter(adapter);
-        mTabLayout.setupWithViewPager(mViewPager);
-    }*/
-    public BottomNavigationView navigationView;
-    private Fragment mFragment;
-    private TabLayout mTabLayout;
-    private ViewPager mViewPager;
 
     @Override
     protected Fragment createFragment() {
@@ -83,10 +45,17 @@ public class MainActivity extends BaseActivity implements BottomNavigationView.O
         super.init();
         navigationView = (BottomNavigationView) findViewById(R.id.navigation);
         navigationView.setOnNavigationItemSelectedListener(this);
+
+        mTabLayout.setVisibility(View.GONE);
+        mViewPager.setVisibility(View.GONE);
+
     }
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+        mTabLayout.setVisibility(View.GONE);
+        mViewPager.setVisibility(View.GONE);
+
         switch (item.getItemId()) {
             case R.id.bottom_nav_map:
                 switchFragment(MapFragment.newInstance());
@@ -99,6 +68,8 @@ public class MainActivity extends BaseActivity implements BottomNavigationView.O
                 break;
             case R.id.bottom_nav_fav:
                 switchFragment(FavFragment.newInstance());
+                mTabLayout.setVisibility(View.VISIBLE);
+                mViewPager.setVisibility(View.VISIBLE);
                 break;
         }
         return true;
