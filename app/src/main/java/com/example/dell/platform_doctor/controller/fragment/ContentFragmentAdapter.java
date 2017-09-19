@@ -11,8 +11,8 @@ import java.util.List;
 
 public class ContentFragmentAdapter extends FragmentPagerAdapter {
     private List<ContentFragment> mFragments;
-    public ContentFragmentAdapter(List<ContentFragment> fragments, android.support.v4.app.FragmentManager fm)
-    {
+
+    public ContentFragmentAdapter(List<ContentFragment> fragments, android.support.v4.app.FragmentManager fm) {
         super(fm);
         this.mFragments = fragments;
     }
