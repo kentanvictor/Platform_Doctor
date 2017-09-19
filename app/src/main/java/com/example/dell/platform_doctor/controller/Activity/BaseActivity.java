@@ -10,6 +10,7 @@ import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 
 import com.example.dell.platform_doctor.R;
 import com.example.dell.platform_doctor.controller.fragment.ContentFragment;
@@ -29,9 +30,9 @@ public abstract class BaseActivity extends AppCompatActivity {
     private Fragment mFragment;
     protected TabLayout mTabLayout;
     protected ViewPager mViewPager;
+    protected Toolbar mToolBar;
     private BottomNavigationView mBottomNavigationView;
     private AppBarLayout mAppBarLayout;
-
 
 
     protected abstract Fragment createFragment();
@@ -67,6 +68,7 @@ public abstract class BaseActivity extends AppCompatActivity {
         mViewPager = (ViewPager) findViewById(R.id.viewpager);
         mBottomNavigationView = (BottomNavigationView) findViewById(R.id.navigation);
         mAppBarLayout = (AppBarLayout) findViewById(R.id.appBarLayout);
+        mToolBar = (Toolbar) findViewById(R.id.toolBar);
     }
 
     public void switchFragment(Fragment fragment) {
