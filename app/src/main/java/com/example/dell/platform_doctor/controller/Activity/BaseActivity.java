@@ -68,7 +68,7 @@ public abstract class BaseActivity extends AppCompatActivity {
         mViewPager = (ViewPager) findViewById(R.id.viewpager);
         mBottomNavigationView = (BottomNavigationView) findViewById(R.id.navigation);
         mAppBarLayout = (AppBarLayout) findViewById(R.id.appBarLayout);
-        mToolBar = (Toolbar) findViewById(R.id.toolBar);
+        /*mToolBar = (Toolbar) findViewById(R.id.toolbar);*/
     }
 
     public void switchFragment(Fragment fragment) {

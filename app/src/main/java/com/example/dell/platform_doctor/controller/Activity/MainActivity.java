@@ -59,19 +59,19 @@ public class MainActivity extends BaseActivity implements BottomNavigationView.O
         switch (item.getItemId()) {
             case R.id.bottom_nav_map:
                 switchFragment(MapFragment.newInstance());
-                mToolBar.setVisibility(View.VISIBLE);
+                /*mToolBar.setVisibility(View.VISIBLE);*/
                 break;
             case R.id.bottom_nav_set:
                 switchFragment(SetFragment.newInstance());
-                mToolBar.setVisibility(View.INVISIBLE);
+                /*mToolBar.setVisibility(View.INVISIBLE);*/
                 break;
             case R.id.bottom_nav_find:
                 switchFragment(FindFragment.newInstance());
-                mToolBar.setVisibility(View.VISIBLE);
+                /*mToolBar.setVisibility(View.VISIBLE);*/
                 break;
             case R.id.bottom_nav_fav:
                 switchFragment(FavFragment.newInstance());
-                mToolBar.setVisibility(View.VISIBLE);
+                /*mToolBar.setVisibility(View.VISIBLE);*/
                 mTabLayout.setVisibility(View.VISIBLE);
                 mViewPager.setVisibility(View.VISIBLE);
                 break;
