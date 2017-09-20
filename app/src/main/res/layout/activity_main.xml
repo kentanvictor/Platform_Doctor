@@ -10,11 +10,27 @@
         android:layout_height="wrap_content"
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
 
-        <View
+        <com.arlib.floatingsearchview.FloatingSearchView
+            android:id="@+id/floating_search_view"
             android:layout_width="match_parent"
-            android:layout_height="64dp"
-            android:background="@color/light_gray"
-            app:layout_scrollFlags="scroll|enterAlways" />
+            android:layout_height="?attr/actionBarSize"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            app:layout_scrollFlags="scroll|enterAlways"
+            app:floatingSearch_close_search_on_keyboard_dismiss="false"
+            app:floatingSearch_dimBackground="false"
+            app:floatingSearch_dismissOnOutsideTouch="true"
+            app:floatingSearch_leftActionMode="showSearch"
+            app:floatingSearch_menu="@menu/menu_search_view"
+            app:floatingSearch_searchBarMarginLeft="5dp"
+            app:floatingSearch_searchBarMarginRight="5dp"
+            app:floatingSearch_searchBarMarginTop="5dp"
+            app:floatingSearch_searchHint="Search..."
+            app:floatingSearch_showSearchKey="true"
+            app:floatingSearch_showVoiceInput="true"
+            app:floatingSearch_suggestionsListAnimDuration="250">
+
+        </com.arlib.floatingsearchview.FloatingSearchView>
         <!--<android.support.v7.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
@@ -58,25 +74,5 @@
         app:layout_scrollFlags="scroll|enterAlways"
         app:menu="@menu/menu_bottom_nav" />
 
-    <com.arlib.floatingsearchview.FloatingSearchView
-        android:id="@+id/floating_search_view"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        app:floatingSearch_close_search_on_keyboard_dismiss="false"
-        app:floatingSearch_dimBackground="false"
-        app:floatingSearch_dismissOnOutsideTouch="true"
-        app:floatingSearch_leftActionMode="showSearch"
-        app:floatingSearch_menu="@menu/menu_search_view"
-        app:floatingSearch_searchBarMarginLeft="5dp"
-        app:floatingSearch_searchBarMarginRight="5dp"
-        app:floatingSearch_searchBarMarginTop="5dp"
-        app:floatingSearch_searchHint="Search..."
-        app:floatingSearch_showSearchKey="true"
-        app:floatingSearch_showVoiceInput="true"
-        app:floatingSearch_suggestionsListAnimDuration="250">
-
-    </com.arlib.floatingsearchview.FloatingSearchView>
 </android.support.design.widget.CoordinatorLayout>
 
