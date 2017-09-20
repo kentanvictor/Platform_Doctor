@@ -36,7 +36,7 @@ public class BottomNavigationViewBehavior extends CoordinatorLayout.Behavior<Vie
 
     @Override
     public boolean onDependentViewChanged(CoordinatorLayout parent, View child, View dependency) {
-        int top = ((AppBarLayout.Behavior)((CoordinatorLayout.LayoutParams)dependency.getLayoutParams()).getBehavior()).getTopAndBottomOffset();
+        int top = ((AppBarLayout.Behavior) ((CoordinatorLayout.LayoutParams) dependency.getLayoutParams()).getBehavior()).getTopAndBottomOffset();
         ViewCompat.setTranslationY(child, -top);
         return false;
     }
