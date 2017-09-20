@@ -12,6 +12,7 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 
+import com.arlib.floatingsearchview.FloatingSearchView;
 import com.example.dell.platform_doctor.R;
 import com.example.dell.platform_doctor.controller.fragment.ContentFragment;
 import com.example.dell.platform_doctor.controller.fragment.ContentFragmentAdapter;
@@ -31,6 +32,7 @@ public abstract class BaseActivity extends AppCompatActivity {
     protected TabLayout mTabLayout;
     protected ViewPager mViewPager;
     protected Toolbar mToolBar;
+    protected FloatingSearchView mFloatinfSearchView;
     private BottomNavigationView mBottomNavigationView;
     private AppBarLayout mAppBarLayout;
 
@@ -69,6 +71,7 @@ public abstract class BaseActivity extends AppCompatActivity {
         mBottomNavigationView = (BottomNavigationView) findViewById(R.id.navigation);
         mAppBarLayout = (AppBarLayout) findViewById(R.id.appBarLayout);
         /*mToolBar = (Toolbar) findViewById(R.id.toolbar);*/
+        mFloatinfSearchView = (FloatingSearchView) findViewById(R.id.floating_search_view);
     }
 
     public void switchFragment(Fragment fragment) {

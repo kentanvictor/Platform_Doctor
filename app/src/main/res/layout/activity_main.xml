@@ -16,7 +16,6 @@
             android:layout_height="?attr/actionBarSize"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
-            app:layout_scrollFlags="scroll|enterAlways"
             app:floatingSearch_close_search_on_keyboard_dismiss="false"
             app:floatingSearch_dimBackground="false"
             app:floatingSearch_dismissOnOutsideTouch="true"
@@ -28,7 +27,8 @@
             app:floatingSearch_searchHint="Search..."
             app:floatingSearch_showSearchKey="true"
             app:floatingSearch_showVoiceInput="true"
-            app:floatingSearch_suggestionsListAnimDuration="250">
+            app:floatingSearch_suggestionsListAnimDuration="250"
+            app:layout_scrollFlags="scroll|enterAlways">
 
         </com.arlib.floatingsearchview.FloatingSearchView>
         <!--<android.support.v7.widget.Toolbar
