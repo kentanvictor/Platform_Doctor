@@ -13,24 +13,20 @@ import android.view.View;
 
 public class BottomNavigationViewBehavior extends CoordinatorLayout.Behavior<View> {
     public BottomNavigationViewBehavior() {
-
     }
 
     public BottomNavigationViewBehavior(Context context, AttributeSet attrs) {
-
         super(context, attrs);
     }
 
     @Override
     public boolean onLayoutChild(CoordinatorLayout parent, View child, int layoutDirection) {
-
         ((CoordinatorLayout.LayoutParams) child.getLayoutParams()).topMargin = parent.getMeasuredHeight() - child.getMeasuredHeight();
         return super.onLayoutChild(parent, child, layoutDirection);
     }
 
     @Override
     public boolean layoutDependsOn(CoordinatorLayout parent, View child, View dependency) {
-
         return dependency instanceof AppBarLayout;
     }
 
