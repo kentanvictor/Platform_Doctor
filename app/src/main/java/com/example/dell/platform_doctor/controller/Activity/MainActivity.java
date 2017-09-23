@@ -27,7 +27,7 @@ public class MainActivity extends BaseActivity implements BottomNavigationView.O
 
     @Override
     protected Fragment createFragment() {
-        return MapFragment.newInstance();
+        return FavFragment.newInstance();
     }
 
     @Override

@@ -31,7 +31,6 @@ public class ContentFragment extends Fragment {
     }
 
     public static ContentFragment newInstance(int fragmentIndex) {
-
         ContentFragment fragment = new ContentFragment();
         Bundle bundle = new Bundle();
         bundle.putInt("fragmentIndex", fragmentIndex);
