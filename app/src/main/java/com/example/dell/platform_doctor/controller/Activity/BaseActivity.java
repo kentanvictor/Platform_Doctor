@@ -6,7 +6,9 @@ import android.support.annotation.LayoutRes;
 import android.support.annotation.Nullable;
 import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.BottomNavigationView;
+import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 
 import com.arlib.floatingsearchview.FloatingSearchView;
@@ -21,8 +23,8 @@ import cn.bmob.v3.Bmob;
 public abstract class BaseActivity extends AppCompatActivity {
     private android.support.v4.app.FragmentManager fm;
     private Fragment mFragment;
-   /* protected TabLayout mTabLayout;
-    protected ViewPager mViewPager;*/
+    protected TabLayout mTabLayout;
+    protected ViewPager mViewPager;
     protected FloatingSearchView mFloatinfSearchView;
     private BottomNavigationView mBottomNavigationView;
     private AppBarLayout mAppBarLayout;
@@ -53,9 +55,9 @@ public abstract class BaseActivity extends AppCompatActivity {
         init();
     }
 
-    public void init() {
-//        mTabLayout = (TabLayout) findViewById(R.id.tabLayout);
-//        mViewPager = (ViewPager) findViewById(R.id.viewpager);
+    protected void init() {
+        mTabLayout = (TabLayout) findViewById(R.id.tabLayout);
+        mViewPager = (ViewPager) findViewById(R.id.viewpager);
         mBottomNavigationView = (BottomNavigationView) findViewById(R.id.navigation);
         mAppBarLayout = (AppBarLayout) findViewById(R.id.appBarLayout);
         mFloatinfSearchView = (FloatingSearchView) findViewById(R.id.floating_search_view);

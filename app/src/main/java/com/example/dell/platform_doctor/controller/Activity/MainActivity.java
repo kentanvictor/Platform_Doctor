@@ -4,9 +4,7 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.design.widget.BottomNavigationView;
-import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
-import android.support.v4.view.ViewPager;
 import android.view.MenuItem;
 import android.view.View;
 
@@ -18,8 +16,6 @@ import com.example.dell.platform_doctor.controller.fragment.SetFragment;
 
 public class MainActivity extends BaseActivity implements BottomNavigationView.OnNavigationItemSelectedListener {
     public BottomNavigationView navigationView;
-    private TabLayout mTabLayout;
-    private ViewPager mViewPager;
     private Fragment mFragment;
 
     private static final String TAG = "MainActivity";
@@ -27,6 +23,7 @@ public class MainActivity extends BaseActivity implements BottomNavigationView.O
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        init();
     }
 
     @Override
@@ -45,15 +42,12 @@ public class MainActivity extends BaseActivity implements BottomNavigationView.O
     }
 
     @Override
-    public void init() {
+    protected void init() {
         super.init();
         navigationView = (BottomNavigationView) findViewById(R.id.navigation);
         navigationView.setOnNavigationItemSelectedListener(this);
-        mTabLayout = (TabLayout) findViewById(R.id.tabLayout);
-        mViewPager = (ViewPager) findViewById(R.id.viewpager);
         mTabLayout.setVisibility(View.GONE);
         mViewPager.setVisibility(View.GONE);
-
     }
 
     @Override
