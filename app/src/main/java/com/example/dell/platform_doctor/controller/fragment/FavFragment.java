@@ -21,6 +21,7 @@ import java.util.List;
 public class FavFragment extends Fragment {
     private TabLayout mTabLayout;
     private ViewPager mViewPager;
+
     public static FavFragment newInstance() {
         return new FavFragment();
     }
@@ -43,11 +44,11 @@ public class FavFragment extends Fragment {
     private void initViewData() {
 
         List<ContentFragment> fragments = new ArrayList<>();
-        for (int i = 0; i < 5;i++) {
+        for (int i = 0; i < 5; i++) {
             fragments.add(ContentFragment.newInstance(i));
         }
         mTabLayout.setTabMode(TabLayout.MODE_FIXED);
-        ContentFragmentAdapter adapter = new ContentFragmentAdapter(fragments,getActivity().getSupportFragmentManager());
+        ContentFragmentAdapter adapter = new ContentFragmentAdapter(fragments, getActivity().getSupportFragmentManager());
         mViewPager.setAdapter(adapter);
         mTabLayout.setupWithViewPager(mViewPager);
     }
