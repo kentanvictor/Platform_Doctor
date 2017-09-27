@@ -11,7 +11,7 @@ import android.widget.Button;
 import android.widget.EditText;
 
 import com.example.dell.platform_doctor.R;
-import com.example.dell.platform_doctor.model.AddData;
+import com.example.dell.platform_doctor.model.Data;
 
 /*
  * Created by JohnnyTan on 2017/7/12.
@@ -28,7 +28,7 @@ public class SetFragment extends Fragment implements View.OnClickListener {
     private String address;
     private String number;
     private int age;
-    private AddData add;
+    private Data data;
     private Context context;
 
     public static SetFragment newInstance() {
@@ -56,7 +56,7 @@ public class SetFragment extends Fragment implements View.OnClickListener {
         addAddress.setOnClickListener(this);
         addPhone.setOnClickListener(this);
         addAge.setOnClickListener(this);
-        add = new AddData();
+        data = new Data();
         context = getActivity();
     }
 
@@ -70,7 +70,7 @@ public class SetFragment extends Fragment implements View.OnClickListener {
                 address = addAddress.getText().toString();
                 number = addPhone.getText().toString();
                 age = Integer.parseInt(addAge.getText().toString());
-                add.addSingleData(context, name, address, number, age);
+                data.addSingleData(context, name, address, number, age);
                 break;
             default:
                 break;
